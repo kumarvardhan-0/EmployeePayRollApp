@@ -1,16 +1,20 @@
 package com.example.employee.model;
 
+import jakarta.persistence.*;
 import lombok.*;
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "employee_payroll")
 public class EmployeePayrollData {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    public EmployeePayrollData(int i, String name2, long salary2) {
-		// TODO Auto-generated constructor stub
-	}
-	public int getId() {
+
+    public int getId() {
 		return id;
 	}
 	public void setId(int id) {
